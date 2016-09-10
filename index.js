@@ -19,10 +19,6 @@ var tx_url=element.children[6].next.children[1].children[1].attribs['src'].split
 ab.push({mp4_url:mp4_url,pic_url:pic_url,tx_url:tx_url})
 });
     });
-    
-  
-
-
 
 app.get('/', function(req, res){
 res.jsonp(ab);
