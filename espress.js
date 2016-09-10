@@ -13,11 +13,9 @@ superagent.get(targetUrl)
     .end(function (err, res) {
 var $ = cheerio.load(res.text);
 $('#mediasList>li').each(function (idx, element) {
-//	var href=element.attribs['data-video'];
 var mp4_url= element.children[3].next['next'].attribs['data-video'];//视频地址
 var pic_url=element.children[3].attribs['src']; //缩略图地址
 var tx_url=element.children[6].next.children[1].children[1].attribs['src'].split("!")[0]; 
-//console.log(tx_url)
 ab.push({mp4_url:mp4_url,pic_url:pic_url,tx_url:tx_url})
 });
     });
@@ -28,10 +26,6 @@ ab.push({mp4_url:mp4_url,pic_url:pic_url,tx_url:tx_url})
 
 app.get('/', function(req, res){
 res.jsonp(ab);
-});
-
-app.get('/a', function(req, res){
- res.sendFile("./1.html");
 });
 
 app.listen(3000);
