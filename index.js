@@ -6,8 +6,6 @@ var superagent = require('superagent'); //这三个外部依赖不要忘记npm i
 var cheerio = require('cheerio');
 var eventproxy = require('eventproxy');
 var targetUrl = 'http://www.meipai.com/medias/hot';
-
-
 var ab=[];
 superagent.get(targetUrl)
     .end(function (err, res) {

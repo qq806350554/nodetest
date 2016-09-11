@@ -10,11 +10,11 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "ejs": "2.4.1",
     "express": "4.13.3",
     "superagent": "2.1.0",
     "cheerio": "0.22.0",
-    "eventproxy": "0.3.5"
+    "eventproxy": "0.3.5",
+    "url": "0.10.3"
   },
   "repository": {
     "type": "git",
