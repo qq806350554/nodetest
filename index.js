@@ -1,4 +1,3 @@
-var http = require('http');
 var express = require('express');
 var app = express();
 var url = require('url'); //解析操作url
@@ -22,4 +21,4 @@ app.get('/', function(req, res){
 res.jsonp(ab);
 });
 
-app.listen(5000);
+app.listen(process.env.PORT||5000);
